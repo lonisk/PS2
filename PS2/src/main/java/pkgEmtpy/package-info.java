@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * @author lonisk
+ *
+ */
+package pkgEmtpy;
