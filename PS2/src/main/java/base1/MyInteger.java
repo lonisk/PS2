@@ -32,10 +32,9 @@ public class MyInteger {
 	
 	//returns true iff iValue is prime
 	public boolean isPrime() {
-		if (iValue%2 == 0)
-			return false;
-		for (int i=3;i*i<=iValue;i+=2) {
-			if (iValue%i == 0)
+		int i;
+		for (i=2; i < iValue ; i++) {
+			if (iValue % i == 0)
 				return false;
 		}
 		return true;
@@ -59,10 +58,9 @@ public class MyInteger {
 	
 	//returns true iff number (type int) is prime
 	public static boolean isPrime(int number) {
-		if (number%2 == 0)
-			return false;
-		for (int i=3;i*i<=number;i+=2) {
-			if (number%i == 0)
+		int i;
+		for (i=2; i < number ; i++) {
+			if (number % i == 0)
 				return false;
 		}
 		return true;
@@ -86,10 +84,9 @@ public class MyInteger {
 	
 	//returns true iff MyInteger is prime
 	public static boolean isPrime(MyInteger num3) {
-		if (num3.getiValue()%2 == 0)
-			return false;
-		for (int i=3;i*i<=num3.getiValue();i+=2) {
-			if (num3.getiValue()%i == 0)
+		int i;
+		for (i=2; i < num3.getiValue() ; i++) {
+			if (num3.getiValue() % i == 0)
 				return false;
 		}
 		return true;
@@ -97,8 +94,7 @@ public class MyInteger {
 	
 	// returns true if value in object is equal to specified value
 	public boolean equals(int num4) {
-		MyInteger INT = new MyInteger(num4);
-		if (INT.getiValue() == num4)
+		if (this.iValue == num4)
 			return true;
 		else
 			return false;
@@ -106,8 +102,7 @@ public class MyInteger {
 	
 	// returns true if value in object is equal to specified value
 	public boolean equals(MyInteger num5) {
-		MyInteger GB = new MyInteger(num5.getiValue());
-		if (num5.getiValue() == GB.getiValue())
+		if (num5.equals(num5.getiValue()))
 			return true;
 		else
 			return false;
